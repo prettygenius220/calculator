@@ -1,34 +1,105 @@
-## Welcome to GitHub Pages
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Calculator</title>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet">
+  <style>
+    *{
+    font-family: "Poppins", Calibri;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
-You can use the [editor on GitHub](https://github.com/prettygenius220/calculator/edit/main/README.md) to maintain and preview the content for your website in Markdown files.
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100%;
+    background-image: linear-gradient(to bottom right, red, green, yellow);
+}
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+.calculator{
+    position: relative;
+    display: grid;
+    margin-top:10px ;
+    width: 25%;
 
-### Markdown
+}
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+.calculator .value{
+    grid-column: span 4;
+    height: 90%;
+    text-align: right;
+    border: none;
+    outline: none;
+    padding: 10px;
+    font-size: 20px;
+}
 
-```markdown
-Syntax highlighted code block
+.calculator span{
+    display: grid;
+    width: 100%;
+    height: 150%;
+    color: white;
+    padding: 20px;
+    background: navy;
+    place-items: center;
+    border: 1px solid rgba(0, 0, 0, 0.493);
+}
 
-# Header 1
-## Header 2
-### Header 3
+.calculator span:active{
+    background: rgb(142, 35, 35);
+    color: blue;
+}
 
-- Bulleted
-- List
+.calculator span.clear{
+    grid-column: span 3;
+    background: rgb(221, 8, 44);
+}
 
-1. Numbered
-2. List
+.calculator span.plus{
+    grid-column: span 2;
+}
 
-**Bold** and _Italic_ and `Code` text
+.calculator span.minus{
+    grid-column: span 2;
+}
 
-[Link](url) and ![Image](src)
-```
-
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
-
-### Jekyll Themes
+.calculator span.bottom{
+    height: 100%;
+}
+  
+  </style>
+</head>
+<body>
+    <form action="#" class="calculator" name="calc">
+        <input type="text" class="value" name="text" readonly="">
+        <span class="num clear" onclick="document.calc.text.value =''">c</span>
+        <span class="num" onclick="document.calc.text.value = eval(calc.text.value)">=</span>
+        <span class="num plus" onclick="document.calc.text.value +='+'">+</span>
+        <span class="num minus" onclick="document.calc.text.value +='-'">-</span>
+        <span class="num" onclick="document.calc.text.value +='1'">1</span>
+        <span class="num" onclick="document.calc.text.value +='2'">2</span>
+        <span class="num" onclick="document.calc.text.value +='3'">3</span>
+        <span class="num" onclick="document.calc.text.value +='4'">4</span>
+        <span class="num" onclick="document.calc.text.value +='5'">5</span>
+        <span class="num" onclick="document.calc.text.value +='6'">6</span>
+        <span class="num" onclick="document.calc.text.value +='7'">7</span>
+        <span class="num" onclick="document.calc.text.value +='8'">8</span>
+        <span class="num bottom" onclick="document.calc.text.value +='9'">9</span>
+        <span class="num bottom" onclick="document.calc.text.value +='0'">0</span>
+        <span class="num bottom" onclick="document.calc.text.value +='00'">00</span>
+        <span class="num bottom" onclick="document.calc.text.value +='.'">.</span>
+        
+  </form>
+    
+</body>
+</html>
 
 Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/prettygenius220/calculator/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
 
