@@ -8,7 +8,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com">
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet">
     <style>
-        *{
+       *{
     font-family: "Poppins", Calibri;
     margin: 0;
     padding: 0;
@@ -19,15 +19,15 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
-    min-height: 100%;
     background-image: linear-gradient(to bottom right, red, green, yellow);
+    background-repeat: no-repeat;
 }
 
 .calculator{
     position: relative;
     display: grid;
-    margin-top:10px ;
-    width: 25%;
+    margin:10px  30px 10px 30px;
+    
 
 }
 
@@ -73,9 +73,22 @@ body{
 .calculator span.bottom{
     height: 100%;
 }
+
+@media(max-height:650px){
+    .calculator{
+        width: 10%;
+        margin: 10%;
+        text-align: center;
+    }
+    body{
+        min-width: 100%;
+        
+    }
+}
     </style>
 </head>
 <body>
+    <div class="mother">
     <form action="#" class="calculator" name="calc">
         <input type="text" class="value" name="text" readonly="">
         <span class="num clear" onclick="document.calc.text.value =''">c</span>
@@ -96,6 +109,7 @@ body{
         <span class="num bottom" onclick="document.calc.text.value +='.'">.</span>
         
    </form>
+   </div>
     <script>
     function disNum(a){
     document.calc.text.value += a;
