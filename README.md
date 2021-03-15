@@ -19,15 +19,15 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
+    min-height: 100%;
     background-image: linear-gradient(to bottom right, red, green, yellow);
-    background-repeat: no-repeat;
 }
 
 .calculator{
     position: relative;
     display: grid;
-    margin:10px  30px 10px 30px;
-    
+    margin-top:10px ;
+    width: 25%;
 
 }
 
@@ -73,44 +73,44 @@ body{
 .calculator span.bottom{
     height: 100%;
 }
-
-@media(max-height:650px){
-    .calculator{
-        width: 10%;
-        margin: 10%;
-        text-align: center;
-    }
-    body{
-        min-width: 100%;
-        
-   }
-}
     </style>
 </head>
 <body>
-    <div class="mother">
-        <form action="#" class="calculator" name="calc">
-            <input type="text" class="value" name="text" readonly="">
-            <span class="num clear" onclick="document.calc.text.value = ''">c</span>
-            <span class="num" onclick= eval(calc.text.value) >=</span>
-            <span class="num plus" onclick="document.calc.text.value +='+'">+</span>
-            <span class="num minus" onclick="document.calc.text.value +='-'">-</span>
-            <span class="num" onclick="document.calc.text.value +='1'">1</span>
-            <span class="num" onclick="document.calc.text.value +='2'">2</span>
-            <span class="num" onclick="document.calc.text.value +='3'">3</span>
-            <span class="num" onclick="document.calc.text.value +='4'">4</span>
-            <span class="num" onclick="document.calc.text.value +='5'">5</span>
-            <span class="num" onclick="document.calc.text.value +='6'">6</span>
-            <span class="num" onclick="document.calc.text.value +='7'">7</span>
-            <span class="num" onclick="document.calc.text.value +='8'">8</span>
-            <span class="num bottom" onclick="document.calc.text.value +='9'">9</span>
-            <span class="num bottom" onclick="document.calc.text.value +='0'">0</span>
-            <span class="num bottom" onclick="document.calc.text.value +='00'">00</span>
-            <span class="num bottom" onclick="document.calc.text.value +='.'">.</span>
-            
+    <form action="#" class="calculator" name="calc">
+        <input type="text" class="value" name="text" readonly="">
+        <span class="num clear" onclick="document.calc.text.value =''">c</span>
+        <span class="num" onclick="document.calc.text.value = eval(calc.text.value)">=</span>
+        <span class="num plus" onclick="document.calc.text.value +='+'">+</span>
+        <span class="num minus" onclick="document.calc.text.value +='-'">-</span>
+        <span class="num" onclick="document.calc.text.value +='1'">1</span>
+        <span class="num" onclick="document.calc.text.value +='2'">2</span>
+        <span class="num" onclick="document.calc.text.value +='3'">3</span>
+        <span class="num" onclick="document.calc.text.value +='4'">4</span>
+        <span class="num" onclick="document.calc.text.value +='5'">5</span>
+        <span class="num" onclick="document.calc.text.value +='6'">6</span>
+        <span class="num" onclick="document.calc.text.value +='7'">7</span>
+        <span class="num" onclick="document.calc.text.value +='8'">8</span>
+        <span class="num bottom" onclick="document.calc.text.value +='9'">9</span>
+        <span class="num bottom" onclick="document.calc.text.value +='0'">0</span>
+        <span class="num bottom" onclick="document.calc.text.value +='00'">00</span>
+        <span class="num bottom" onclick="document.calc.text.value +='.'">.</span>
+        
    </form>
-    </div>
-    
-    
+    <script>
+    function disNum(a){
+    document.calc.text.value += a;
+}
+
+function clearNum(){
+    document.calc.text.value = '';
+}
+
+function evalResult(){
+    var result = eval(calc.text.value);
+    document.calc.text.value = result;
+}
+   </script>
+</body>
+</html>
 </body>
 </html>
