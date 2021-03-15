@@ -7,8 +7,8 @@
     <link rel="stylesheet" href="./style.css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet">
-  <style>
-    *{
+    <style>
+        *{
     font-family: "Poppins", Calibri;
     margin: 0;
     padding: 0;
@@ -78,36 +78,39 @@ body{
     .calculator{
         width: 10%;
         margin: 10%;
+        text-align: center;
     }
     body{
         min-width: 100%;
-    }
+        
+   }
 }
-  
-  </style>
+    </style>
 </head>
 <body>
-    <form action="#" class="calculator" name="calc">
-        <input type="text" class="value" name="text" readonly="">
-        <span class="num clear" onclick="document.calc.text.value =''">c</span>
-        <span class="num" onclick="document.calc.text.value = eval(calc.text.value)">=</span>
-        <span class="num plus" onclick="document.calc.text.value +='+'">+</span>
-        <span class="num minus" onclick="document.calc.text.value +='-'">-</span>
-        <span class="num" onclick="document.calc.text.value +='1'">1</span>
-        <span class="num" onclick="document.calc.text.value +='2'">2</span>
-        <span class="num" onclick="document.calc.text.value +='3'">3</span>
-        <span class="num" onclick="document.calc.text.value +='4'">4</span>
-        <span class="num" onclick="document.calc.text.value +='5'">5</span>
-        <span class="num" onclick="document.calc.text.value +='6'">6</span>
-        <span class="num" onclick="document.calc.text.value +='7'">7</span>
-        <span class="num" onclick="document.calc.text.value +='8'">8</span>
-        <span class="num bottom" onclick="document.calc.text.value +='9'">9</span>
-        <span class="num bottom" onclick="document.calc.text.value +='0'">0</span>
-        <span class="num bottom" onclick="document.calc.text.value +='00'">00</span>
-        <span class="num bottom" onclick="document.calc.text.value +='.'">.</span>
-        
-  </form>
+    <div class="mother">
+        <form action="#" class="calculator" name="calc">
+            <input type="text" class="value" name="text" readonly="">
+            <span class="num clear" onclick="document.calc.text.value = ''">c</span>
+            <span class="num" onclick= eval(calc.text.value) >=</span>
+            <span class="num plus" onclick="document.calc.text.value +='+'">+</span>
+            <span class="num minus" onclick="document.calc.text.value +='-'">-</span>
+            <span class="num" onclick="document.calc.text.value +='1'">1</span>
+            <span class="num" onclick="document.calc.text.value +='2'">2</span>
+            <span class="num" onclick="document.calc.text.value +='3'">3</span>
+            <span class="num" onclick="document.calc.text.value +='4'">4</span>
+            <span class="num" onclick="document.calc.text.value +='5'">5</span>
+            <span class="num" onclick="document.calc.text.value +='6'">6</span>
+            <span class="num" onclick="document.calc.text.value +='7'">7</span>
+            <span class="num" onclick="document.calc.text.value +='8'">8</span>
+            <span class="num bottom" onclick="document.calc.text.value +='9'">9</span>
+            <span class="num bottom" onclick="document.calc.text.value +='0'">0</span>
+            <span class="num bottom" onclick="document.calc.text.value +='00'">00</span>
+            <span class="num bottom" onclick="document.calc.text.value +='.'">.</span>
+            
+   </form>
+    </div>
+    
     
 </body>
 </html>
-
